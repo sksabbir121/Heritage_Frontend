@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leading Page</title>
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #f8f9fa;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar-nav {
+            display: flex;
+            gap: 15px;
+        }
+        .navbar-nav a {
+            text-decoration: none;
+            color: #000;
+            padding: 8px 12px;
+            transition: background-color 0.3s ease;
+        }
+        .navbar-nav a:hover {
+            background-color: #e2e6ea;
+            border-radius: 5px;
+        }
+        .navbar-brand img {
+            width: 100px;
+            height: auto;
+        }
+        .center-logo {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+        .cover {
+            background-image: url('real2.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+        }
+        .cover h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .cover .search-btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .cover .search-btn:hover {
+            background-color: #0056b3;
+        }
+
+        p1{
+            font-size: 50px;
+        }
+        p2{
+            font-size: 50px;
+        }
+
+        /* Content Section Styling */
+    .content-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 20px;
+        gap: 40px; /* Gap between the two parts */
+        background-color: #f4f4f4;
+    }
+
+    .left-part {
+        width: 80%; 
+            }
+
+    /* Left Part Styling */
+    .left-part img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    /* Right Part Styling */
+    .right-part {
+        max-width: 50%;
+        padding-left: 5%;
+    }
+
+    .right-part h2 {
+        font-size: 28px;
+        color: #101828;
+    }
+
+    .right-part p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        color: #555;
+    }
+
+    /* Search Button Styling */
+    .right-part .search-btn {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 18px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .right-part .search-btn:hover {
+        background-color: #0056b3;
+    }
+
+    p3{
+        font-size: 20px;
+        color: #F06711;
+        
+    }
+
+    /* Content Section Styling */
+    .content-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 20px;
+        background-color: #f4f4f4;
+    }
+
+    /* Left Part Styling */
+    .left-part {
+        width: 50%; /* 50% of the container's width */
+    }
+
+    .left-part h2 {
+        font-size: 28px;
+        color: #101828; /* Blue color for the heading */
+    }
+
+    .left-part p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        color: #555555; /* Gray color for the paragraph */
+    }
+
+    .left-part .search-btn {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 18px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .left-part .search-btn:hover {
+        background-color: #0056b3;
+    }
+
+    /* Right Part Styling */
+    .right-part {
+        width: 50%; /* 50% of the container's width */
+        padding-left: 20px; /* Adds some space between the image and text */
+    }
+
+    .right-part img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    /* Our Services Section */
+    .our-services {
+        text-align: center;
+        margin-top: 50px;
+        padding: 20px;
+    }
+
+    .our-services h2 {
+        font-size: 32px;
+        margin-bottom: 30px; /* 30px gap after the heading */
+        color: #181818; /* Dark color for the heading */
+    }
+
+    .services-cards {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px; /* Adds space between the cards */
+    }
+
+    .service-card {
+        background-color: #ECF5FF;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 30px;
+        width: 30%; /* Each card takes up 30% of the container's width */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-card h3 {
+        font-size: 24px;
+        color: #111827; /* Blue color for the card heading */
+        margin-bottom: 10px;
+    }
+
+    .service-card p {
+        font-size: 14px;
+        color: #818181; /* Gray color for the paragraph */
+    }
+
+    /* Footer Styling */
+    footer {
+        width: 1280px;
+        height: 240px;
+        padding: 0px 32px;
+        background-color: #ECF5FF;
+        color: #475467;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 48px;
+    }
+
+    /* Top Left Section */
+    .footer-top-left {
+        flex: 1;
+    }
+
+    .footer-icon {
+        width: 60px; /* Adjust size as needed */
+        height: 60px; /* Adjust size as needed */
+        margin-bottom: 20px;
+    }
+
+    .footer-top-left p {
+        max-width: 240px; /* Adjust width as needed */
+        margin: 0;
+    }
+
+    /* Footer Columns */
+    .footer-columns {
+        display: flex;
+        gap: 38px;
+    }
+
+    .footer-column {
+        flex: 1;
+    }
+
+    .footer-column h4 {
+        margin-bottom: 16px;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+
+    .footer-column ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-column ul li {
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+
+
+
+
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <!-- Left Side - Buy, Sell, Services -->
+    <div class="navbar-nav">
+        <a href="#">Buy</a>
+        <a href="#">Sell</a>
+        <a href="#">Services</a>
+    </div>
+    
+    <!-- Center - Logo/Image -->
+    <div class="center-logo">
+        <a class="navbar-brand" href="#">
+            <img src="real1.png" alt="Logo">
+        </a>
+    </div>
+    
+    <!-- Right Side - Manage Rentals, Sign In -->
+    <div class="navbar-nav">
+        <a href="#">Manage Rentals</a>
+        <a href="#">Sign In</a>
+    </div>
+</nav>
+
+<!-- Cover Section -->
+<div class="cover">
+    <p1 id="p1">Your Portal to India's </p1>
+    <p2 id="p2">Exquisite Real Estate</p2>
+    <h6>Seamlessly connecting you to the heartbeat of India's prime properties.</h6>
+    <a href="#" class="search-btn">Find Property</a>
+</div>
+
+<!-- Content Section with Two Parts -->
+<div class="content-section">
+    <!-- Left Part - Image -->
+    <div class="left-part">
+        <img src="real3.jpg" alt="Home Image">
+    </div>
+    
+    <!-- Right Part - Text and Button -->
+    <div class="right-part">
+        <p3 id="p3">Property buying</p3>
+        <h2>Efficient and Transparent Home Buying Solutions</h2>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+        <a href="#" class="search-btn">Find Property</a>
+    </div>
+</div>
+
+<div class="content-section">
+    <!-- Left Part - Text and Button -->
+    <div class="left-part">
+        <p3 id="p3">Property buying</p3>
+        <h2>Efficient and Transparent Home Buying Solutions</h2>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+        <a href="#" class="search-btn">Find Property</a>
+    </div>
+
+    <!-- Right Part - Image -->
+    <div class="right-part">
+        <img src="real4.jpg" alt="Home Image">
+    </div>
+</div>
+
+<!-- Content Section with Two Parts -->
+<div class="content-section">
+    <!-- Left Part - Image -->
+    <div class="left-part">
+        <img src="real5.jpg" alt="Home Image">
+    </div>
+    
+    <!-- Right Part - Text and Button -->
+    <div class="right-part">
+        <p3 id="p3">Property buying</p3>
+        <h2>Efficient and Transparent Home Buying Solutions</h2>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+        <a href="#" class="search-btn">Find Property</a>
+    </div>
+</div>
+
+<div class="our-services">
+    <h2>Other Services</h2>
+    <div class="services-cards">
+        <!-- Card 1 -->
+        <div class="service-card">
+            <h3>Advanced Property Search</h3>
+            <p>Effortlessly find your dream property with advanced search filters.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="service-card">
+            <h3>Virtual Tours and Multimedia</h3>
+            <p>Explore properties through immersive virtual tours and HD photos.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="service-card">
+            <h3>Secure Online Transactions</h3>
+            <p>Ensure secure transactions and e-sign documents seamlessly online.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <!-- Top Left: Icon and Description -->
+        <div class="footer-top-left">
+            <img src="real1.png" alt="Icon" class="footer-icon">
+            <h5>Design amazing digital experiences</h5>
+            <h5> that create more happy in the world.</h5>
+        </div>
+
+        <!-- Footer Columns -->
+        <div class="footer-columns">
+            <!-- Product Column -->
+            <div class="footer-column">
+                <h4>Product</h4>
+                <ul>
+                    <li>Overview</li>
+                    <li>Features</li>
+                    <li>Solutions</li>
+                    <li>Tutorial</li>
+                    <li>Pricing</li>
+                    <li>Releases</li>
+                </ul>
+            </div>
+
+            <!-- Company Column -->
+            <div class="footer-column">
+                <h4>Company</h4>
+                <ul>
+                    <li>About Us</li>
+                    <li>Careers</li>
+                    <li>Press</li>
+                    <li>News</li>
+                    <li>Media Kit</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+
+            <!-- Resource Column -->
+            <div class="footer-column">
+                <h4>Resource</h4>
+                <ul>
+                    <li>Blog</li>
+                    <li>Newsletters</li>
+                    <li>Events</li>
+                    <li>Help Center</li>
+                    <li>Tutorial</li>
+                    <li>Support</li>
+                </ul>
+            </div>
+
+            <!-- Social Column -->
+            <div class="footer-column">
+                <h4>Social</h4>
+                <ul>
+                    <li>Twitter</li>
+                    <li>LinkedIn</li>
+                    <li>Facebook</li>
+                    <li>GitHub</li>
+                    <li>AngelList</li>
+                    <li>Dribbble</li>
+                </ul>
+            </div>
+
+            <!-- Legal Column -->
+            <div class="footer-column">
+                <h4>Legal</h4>
+                <ul>
+                    <li>Terms</li>
+                    <li>Privacy</li>
+                    <li>Cookies</li>
+                    <li>Licenses</li>
+                    <li>Settings</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+</body>
+</html>

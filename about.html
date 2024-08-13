@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+
+    <!-- Internal CSS -->
+<style>
+        
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-section {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left,
+.navbar-right {
+    gap: 20px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.nav-item a:hover {
+    background-color: #e2e6ea;
+}
+
+/* Center Logo Section */
+.center-logo {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-img {
+    max-height: 100px;
+    width: 100px;
+}
+
+/* Button Group Styles */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .center-logo {
+        margin: 10px 0;
+    }
+    
+    .navbar-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .navbar-left,
+    .navbar-right {
+        gap: 10px;
+    }
+    
+    }
+
+    .cover {
+            background-image: url('real2.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .card-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1216px;
+        margin: 50px;
+        gap: 32px;
+        padding-top: 32px;
+    }
+
+    /* Card Styling */
+    .card {
+        width: 280px;
+        height: 185px;
+        padding: 24px;
+        border-radius: 8px;
+        background-color: #FDF0E7;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+
+    /* Top Left Corner - 2k+ */
+    .card .top-left {
+        position: absolute;
+        top: 24px;
+        left: 24px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #333333;
+    }
+
+    /* Title Text - New Flat Listed */
+    .card .title-text {
+        margin-top: 32px;
+        margin-left: 24px;
+        font-size: 18px;
+        color: #666666;
+    }
+
+    /* View All Link */
+    .card .view-all {
+        margin-left: 24px;
+        margin-top: 8px;
+        font-size: 14px;
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    /* Bottom Left Corner - Icon */
+    .card .bottom-left {
+        position: absolute;
+        bottom: 24px;
+        left: 24px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .card .bottom-left img {
+        width: 100%;
+        height: auto;
+    }
+
+    
+        /* Content Section Styling */
+        .content-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 20px;
+        gap: 40px; 
+        background-color: #f4f4f4;
+    }
+
+    .left-part {
+        width: 80%; 
+            }
+
+    /* Left Part Styling */
+    .left-part img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    /* Right Part Styling */
+    .right-part {
+        max-width: 50%;
+        padding-left: 5%;
+    }
+
+    .right-part h2 {
+        font-size: 28px;
+        color: #101828;
+    }
+
+    .right-part p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        color: #555;
+    }
+
+    /* Search Button Styling */
+    .right-part .search-btn {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 18px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .right-part .search-btn:hover {
+        background-color: #0056b3;
+    }
+
+    p3{
+        font-size: 20px;
+        color: #F06711;
+        
+    }
+
+    /* Content Section Styling */
+    .content-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 20px;
+        background-color: #f4f4f4;
+    }
+
+    /* Left Part Styling */
+    .left-part {
+        width: 50%; 
+    }
+
+    .left-part h2 {
+        font-size: 28px;
+        color: #101828; 
+    }
+
+    .left-part p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        color: #555555; 
+    }
+
+    .left-part .search-btn {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 18px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .left-part .search-btn:hover {
+        background-color: #0056b3;
+    }
+
+    /* Right Part Styling */
+    .right-part {
+        width: 50%; 
+        padding-left: 20px; 
+    }
+
+    .right-part img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    /* Team members section */
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .team-section {
+        width: 1050px;
+        height: 450px;
+        margin: 100px;
+        padding: 32px;
+        background-color: #f9f9f9;
+    }
+
+    .team-title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #EE6611;
+        margin-bottom: 16px;
+    }
+
+    .team-subtitle {
+        font-size: 18px;
+        color: #181818;
+        margin-bottom: 32px;
+    }
+
+    .team-images {
+        display: flex;
+        gap: 64px;
+    }
+
+    .team-image {
+        width: 300px; 
+        height: auto;
+        border-radius: 8px;
+    }
+
+    /* Testimonials Section */
+    .testimonials-section {
+        padding: 60px 0;
+        background-color: #f9f9f9;
+        margin: 50px;
+    }
+
+    /* Testimonials Container */
+    .testimonials-container {
+        max-width: 1216px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    /* Testimonials Header */
+    .testimonials-header {
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 40px;
+    }
+
+    /* Testimonials Cards Container */
+    .testimonials-cards-container {
+        display: flex;
+        gap: 32px;
+    }
+
+    /* Individual Testimonial Card */
+    .testimonial-card {
+        flex: 1;
+        background-color: #ECF5FF;
+        border-radius: 8px;
+        padding: 40px 20px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Top Image in Card */
+    .testimonial-top-image {
+        width: 20%;
+        height: 20%;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+
+    /* Testimonial Paragraph */
+    .testimonial-paragraph {
+        font-size: 16px;
+        color: #333333;
+        margin-bottom: 24px;
+    }
+
+    /* User Image */
+    .testimonial-user-image {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-bottom: 16px;
+    }
+
+    /* User Name */
+    .testimonial-user-name {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333333;
+        margin-bottom: 8px;
+    }
+
+    /* User Title */
+    .testimonial-user-title {
+        font-size: 14px;
+        color: #666666;
+    }
+
+    /* Footer Styling */
+footer {
+    width: 1280px;
+    height: 240px;
+    padding: 0px 32px;
+    background-color: #ECF5FF;
+    color: #475467;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 48px;
+}
+
+/* Top Left Section */
+.footer-top-left {
+    flex: 1;
+}
+
+.footer-icon {
+    width: 60px; 
+    height: 60px; 
+    margin-bottom: 20px;
+}
+
+.footer-top-left p {
+    max-width: 240px; 
+    margin: 0;
+}
+
+/* Footer Columns */
+.footer-columns {
+    display: flex;
+    gap: 38px;
+}
+
+.footer-column {
+    flex: 1;
+}
+
+.footer-column h4 {
+    margin-bottom: 16px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+
+    </style>
+
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+    <!-- Left Side - Buy, Sell, Services -->
+    <div class="navbar-section navbar-left">
+        <div class="nav-item"><a href="#">Buy</a></div>
+        <div class="nav-item"><a href="#">Sell</a></div>
+        <div class="nav-item"><a href="#">Services</a></div>
+    </div>
+    
+    <!-- Center - Logo/Image -->
+    <div class="navbar-section center-logo">
+        <a href="#"><img src="real1.png" alt="Logo" class="logo-img"></a>
+    </div>
+    
+    <!-- Right Side - Manage Rentals, Sign In -->
+    <div class="navbar-section navbar-right">
+        <div class="nav-item"><a href="#">Manage Rentals</a></div>
+        <div class="nav-item"><a href="#">Sign In</a></div>
+    </div>
+</div>
+
+<!-- Cover Section -->
+<div class="cover">
+    
+</div>
+
+<div class="card-container">
+    <!-- Card 1 -->
+    <div class="card">
+        <div class="top-left">2k+</div>
+        <div class="title-text">New Flat Listed</div>
+        <a href="#" class="view-all">View All</a>
+        <div class="bottom-left">
+            <img src="download.png" alt="Icon">
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+        <div class="top-left">2k+</div>
+        <div class="title-text">New Flat Listed</div>
+        <a href="#" class="view-all">View All</a>
+        <div class="bottom-left">
+            <img src="download.png" alt="Icon">
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+        <div class="top-left">2k+</div>
+        <div class="title-text">New Flat Listed</div>
+        <a href="#" class="view-all">View All</a>
+        <div class="bottom-left">
+            <img src="download.png" alt="Icon">
+        </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+        <div class="top-left">2k+</div>
+        <div class="title-text">New Flat Listed</div>
+        <a href="#" class="view-all">View All</a>
+        <div class="bottom-left">
+            <img src="download.png" alt="Icon">
+        </div>
+    </div>
+</div>
+
+<!-- Content Section with Two Parts -->
+<div class="content-section">
+    <!-- Left Part - Image -->
+    <div class="left-part">
+        <img src="real3.jpg" alt="Home Image">
+    </div>
+    
+    <!-- Right Part - Text and Button -->
+    <div class="right-part">
+        <p3 id="p3">Our Story</p3>
+        <h2>Efficient and Transparent Home Buying Solutions</h2>
+        <p>In the symphony of bustling markets and serene landscapes, Heritage-Nest was born—a vision to</p>
+    </div>
+</div>
+
+<div class="content-section">
+    <!-- Left Part - Text and Button -->
+    <div class="left-part">
+        <p3 id="p3">Our Story</p3>
+        <h2>Efficient and Transparent Home Buying Solutions</h2>
+        <p>In the symphony of bustling markets and serene landscapes, Heritage-Nest was born—a vision to</p>
+       
+    </div>
+
+    <!-- Right Part - Image -->
+    <div class="right-part">
+        <img src="real4.jpg" alt="Home Image">
+    </div>
+</div>
+
+<div class="team-section">
+    <p class="team-title">Our Team</p>
+    <h2 class="team-subtitle">Discover the Faces Behind Our Success</h2>
+    <div class="team-images">
+        <img src="mem1.jpg" alt="Team Member 1" class="team-image">
+        <img src="mem2.jpg" alt="Team Member 2" class="team-image">
+        <img src="mem3.jpg" alt="Team Member 3" class="team-image">
+    </div>
+</div>
+
+<!-- Testimonials Section -->
+<section class="testimonials-section">
+    <div class="testimonials-container">
+        <!-- Testimonials Header -->
+        <h2 class="testimonials-header">Testimonials</h2>
+        
+        <!-- Testimonials Cards Container -->
+        <div class="testimonials-cards-container">
+            <!-- Card 1 -->
+            <div class="testimonial-card">
+                <img src="star.jpg" alt="Testimonial Image" class="testimonial-top-image">
+                <p class="testimonial-paragraph">
+                    "The level of security provided by CypherPlay is unmatched. I feel confident using my card for both everyday purchases and travel. It's the peace of mind I was looking for."
+                </p>
+                <img src="user.jpg" alt="User Image" class="testimonial-user-image">
+                <div class="testimonial-user-name">Tony Stark</div>
+                <div class="testimonial-user-title">Marketing Manager, XYZ</div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="testimonial-card">
+                <img src="star.jpg" alt="Testimonial Image" class="testimonial-top-image">
+                <p class="testimonial-paragraph">
+                    "The level of security provided by CypherPlay is unmatched. I feel confident using my card for both everyday purchases and travel. It's the peace of mind I was looking for."
+                </p>
+                <img src="user.jpg" alt="User Image" class="testimonial-user-image">
+                <div class="testimonial-user-name">Tony Stark</div>
+                <div class="testimonial-user-title">Marketing Manager, XYZ</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-container">
+        <!-- Top Left: Icon and Description -->
+        <div class="footer-top-left">
+            <img src="real1.png" alt="Icon" class="footer-icon">
+            <h5>Design amazing digital experiences</h5>
+            <h5> that create more happy in the world.</h5>
+        </div>
+
+        <!-- Footer Columns -->
+        <div class="footer-columns">
+            <!-- Product Column -->
+            <div class="footer-column">
+                <h4>Product</h4>
+                <ul>
+                    <li>Overview</li>
+                    <li>Features</li>
+                    <li>Solutions</li>
+                    <li>Tutorial</li>
+                    <li>Pricing</li>
+                    <li>Releases</li>
+                </ul>
+            </div>
+
+            <!-- Company Column -->
+            <div class="footer-column">
+                <h4>Company</h4>
+                <ul>
+                    <li>About Us</li>
+                    <li>Careers</li>
+                    <li>Press</li>
+                    <li>News</li>
+                    <li>Media Kit</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+
+            <!-- Resource Column -->
+            <div class="footer-column">
+                <h4>Resource</h4>
+                <ul>
+                    <li>Blog</li>
+                    <li>Newsletters</li>
+                    <li>Events</li>
+                    <li>Help Center</li>
+                    <li>Tutorial</li>
+                    <li>Support</li>
+                </ul>
+            </div>
+
+            <!-- Social Column -->
+            <div class="footer-column">
+                <h4>Social</h4>
+                <ul>
+                    <li>Twitter</li>
+                    <li>LinkedIn</li>
+                    <li>Facebook</li>
+                    <li>GitHub</li>
+                    <li>AngelList</li>
+                    <li>Dribbble</li>
+                </ul>
+            </div>
+
+            <!-- Legal Column -->
+            <div class="footer-column">
+                <h4>Legal</h4>
+                <ul>
+                    <li>Terms</li>
+                    <li>Privacy</li>
+                    <li>Cookies</li>
+                    <li>Licenses</li>
+                    <li>Settings</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+</body>
+</html>

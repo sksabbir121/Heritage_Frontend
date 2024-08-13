@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buyer Sence Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f8f9fa;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-left,
+        .navbar-right {
+            gap: 20px;
+        }
+
+        .nav-item a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+
+        .nav-item a:hover {
+            background-color: #e2e6ea;
+        }
+
+        /* Center Logo Section */
+        .center-logo {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .logo-img {
+            max-height: 100px;
+            width: 100px;
+        }
+
+        /* Media Query for Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .center-logo {
+                margin: 10px;
+            }
+            
+            .navbar-section {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .navbar-left,
+            .navbar-right {
+                gap: 10px;
+            }
+        }
+
+
+   
+
+        /* Cover Background */
+        .cover-background {
+            background-image: url('real6.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 500px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Card Styling */
+        .search-card {
+            width: 984px;
+            height: 450px;
+            border-radius: 8px;
+            background-color: #ffffff;
+            padding: 32px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        /* Header Buttons */
+        .header-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .header-buttons button {
+            flex: 1;
+            border: none;
+            padding: 12px;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        /* Search Bar */
+        .search-bar {
+            width: 100%;
+            padding: 12px;
+            border-radius: 4px;
+            border: 1px solid #cccccc;
+        }
+
+        /* Icon Elements */
+        .icon-elements {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .icon-element {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 16px;
+            border-radius: 4px;
+            background-color: #f4f4f4;
+        }
+
+        .icon-element img {
+            width: 24px;
+            height: 24px;
+            margin-bottom: 2px;
+        }
+
+        .icon-element select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #cccccc;
+            cursor: pointer;
+        }
+
+        /* Find Property Button */
+        .find-property-button {
+            width: 920px;
+            height: 48px;
+            border-radius: 4px;
+            padding: 12px 30px 12px 30px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        /* Main Div Styling */
+    .card-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1216px;
+        margin: 50px;
+        gap: 32px;
+        padding-top: 32px;
+    }
+
+    /* Card Styling */
+    .card {
+        width: 280px;
+        height: 185px;
+        padding: 24px;
+        border-radius: 8px;
+        background-color: #FDF0E7;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+
+    /* Top Left Corner - 2k+ */
+    .card .top-left {
+        position: absolute;
+        top: 24px;
+        left: 24px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #333333;
+    }
+
+    /* Title Text - New Flat Listed */
+    .card .title-text {
+        margin-top: 32px;
+        margin-left: 24px;
+        font-size: 18px;
+        color: #666666;
+    }
+
+    /* View All Link */
+    .card .view-all {
+        margin-left: 24px;
+        margin-top: 8px;
+        font-size: 14px;
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    /* Bottom Left Corner - Icon */
+    .card .bottom-left {
+        position: absolute;
+        bottom: 24px;
+        left: 24px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .card .bottom-left img {
+        width: 100%;
+        height: auto;
+    }
+
+    .popular-properties-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1216px;
+    margin-left: 50px;
+    padding-top: 32px;
+    padding-bottom: 16px;
+    }
+
+/* Section Title */
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+    }
+
+/* See All Properties Link */
+.see-all-link {
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Unique Property Cards Container */
+.unique-property-cards-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1216px;
+    margin: 0 auto;
+    gap: 32px;
+    padding: 32px 0;
+    position: relative;
+}
+
+/* Arrow Styling */
+.unique-arrow {
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.unique-left-arrow {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.unique-right-arrow {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Unique Cards Container */
+.unique-cards {
+    display: flex;
+    gap: 32px;
+    overflow: hidden;
+}
+
+/* Individual Card Styling */
+.unique-card {
+    width: 280px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    text-align: center;
+}
+
+.unique-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.unique-property-type {
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.unique-property-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 16px;
+}
+
+.unique-location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 16px;
+}
+
+.unique-location img {
+    margin-right: 8px;
+    width: 20%;
+}
+
+.unique-price {
+    display: flex;
+    align-items: last baseline;
+    justify-content: last baseline;
+    margin-left: 5%;
+    font-size: 22px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.unique-price img {
+    width: 8%;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    margin: 50px;
+}
+
+/* Testimonials Container */
+.testimonials-container {
+    max-width: 1216px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Testimonials Header */
+.testimonials-header {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+/* Testimonials Cards Container */
+.testimonials-cards-container {
+    display: flex;
+    gap: 32px;
+}
+
+/* Individual Testimonial Card */
+.testimonial-card {
+    flex: 1;
+    background-color: #ECF5FF;
+    border-radius: 8px;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Top Image in Card */
+.testimonial-top-image {
+    width: 20%;
+    height: 20%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Testimonial Paragraph */
+.testimonial-paragraph {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 24px;
+}
+
+/* User Image */
+.testimonial-user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+/* User Name */
+.testimonial-user-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 8px;
+}
+
+/* User Title */
+.testimonial-user-title {
+    font-size: 14px;
+    color: #666666;
+}
+
+/* Footer Styling */
+footer {
+    width: 1280px;
+    height: 240px;
+    padding: 0px 32px;
+    background-color: #ECF5FF;
+    color: #475467;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 48px;
+}
+
+/* Top Left Section */
+.footer-top-left {
+    flex: 1;
+}
+
+.footer-icon {
+    width: 60px; 
+    height: 60px; 
+    margin-bottom: 20px;
+}
+
+.footer-top-left p {
+    max-width: 240px; 
+    margin: 0;
+}
+
+/* Footer Columns */
+.footer-columns {
+    display: flex;
+    gap: 38px;
+}
+
+.footer-column {
+    flex: 1;
+}
+
+.footer-column h4 {
+    margin-bottom: 16px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="navbar">
+    <!-- Left Side - Buy, Sell, Services -->
+    <div class="navbar-section navbar-left">
+        <div class="nav-item"><a href="#">Buy</a></div>
+        <div class="nav-item"><a href="#">Sell</a></div>
+        <div class="nav-item"><a href="#">Services</a></div>
+    </div>
+    
+    <!-- Center - Logo/Image -->
+    <div class="navbar-section center-logo">
+        <a href="#"><img src="real1.png" alt="Logo" class="logo-img"></a>
+    </div>
+    
+    <!-- Right Side - Manage Rentals, Sign In -->
+    <div class="navbar-section navbar-right">
+        <div class="nav-item"><a href="#">Manage Rentals</a></div>
+        <div class="nav-item"><a href="#">Sign In</a></div>
+    </div>
+</div>
+
+<!-- Cover Background with Card -->
+<div class="cover-background">
+    <div class="search-card">
+        <!-- Header Buttons -->
+        <div class="header-buttons">
+            <button>Buy</button>
+            <button>Rent</button>
+            <button>PG</button>
+            <button>Plot</button>
+            <button>Commercial</button>
+        </div>
+
+        <!-- Search Bar -->
+        <input type="text" class="search-bar" placeholder="Search Property">
+
+        <!-- Icon Elements -->
+        <div class="icon-elements">
+            <!-- Location Element -->
+            <div class="icon-element">
+                <img src="location-pin.png" alt="Location Icon">
+                <p>Location</p>
+                <select>
+                    <option>Location</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+
+            <!-- Property Type Element -->
+            <div class="icon-element">
+                <img src="real-estate.png" alt="Property Type Icon">
+                <p>Property Type</p>
+                <select>
+                    <option>Property Type</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+
+            <!-- Budget Element -->
+            <div class="icon-element">
+                <img src="dollar.png" alt="Budget Icon">
+                <p>Budget</p>
+                <select>
+                    <option>Budget</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+        </div>
+
+        <!-- Find Property Button -->
+        <button class="find-property-button">Find Property</button>
+    </div>
+</div>
+
+<div class="card-container">
+    <!-- Card 1 -->
+    <div class="card">
+        <div class="top-left">2k+</div>
+        <div class="title-text">New Flat Listed</div>
+        <a href="#" class="view-all">View All</a>
+        <div class="bottom-left">
+            <img src="download.png" alt="Icon">
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+        
+        <div class="title-text">New Flat Listed</div>
+        <a href="#" class="view-all">View All</a>
+        <div class="bottom-left">
+            <img src="download.png" alt="Icon">
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+        <div class="top-left">2k+</div>
+        <div class="title-text">New Flat Listed</div>
+        <a href="#" class="view-all">View All</a>
+        <div class="bottom-left">
+            <img src="download.png" alt="Icon">
+        </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+        <div class="top-left">2k+</div>
+        <div class="title-text">New Flat Listed</div>
+        <a href="#" class="view-all">View All</a>
+        <div class="bottom-left">
+            <img src="download.png" alt="Icon">
+        </div>
+    </div>
+</div>
+
+<!-- Popular Properties Section -->
+<div class="popular-properties-container">
+    <h2 class="section-title">Popular Properties</h2>
+    <a href="#" class="see-all-link">See All Properties</a>
+</div>
+
+<!-- Unique Property Cards Section -->
+<div class="unique-property-cards-container">
+    <!-- Left Arrow for Navigation -->
+    <div class="unique-arrow unique-left-arrow">&#8249;</div>
+    
+    <!-- Cards Container -->
+    <div class="unique-cards">
+        <!-- Card 1 -->
+        <div class="unique-card">
+            <img src="real7.jpg" alt="Apartment Image">
+            <a href="#" class="unique-property-type">Apartment</a>
+            <div class="unique-property-title">SunnySlope Suites</div>
+            <div class="unique-location">
+                <img src="location-pin.png" alt="Location Icon">
+                <span>Meadowshire Park, Greenfield, USA</span>
+            </div>
+            <div class="unique-price">
+                <img src="dollar.png" alt="Price Icon">
+                <span>25000</span>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="unique-card">
+            <img src="real8.jpg" alt="Apartment Image">
+            <a href="#" class="unique-property-type">Apartment</a>
+            <div class="unique-property-title">SunnySlope Suites</div>
+            <div class="unique-location">
+                <img src="location-pin.png" alt="Location Icon">
+                <span>Meadowshire Park, Greenfield, USA</span>
+            </div>
+            <div class="unique-price">
+                <img src="dollar.png" alt="Price Icon">
+                <span>25000</span>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="unique-card">
+            <img src="real9.jpg" alt="Apartment Image">
+            <a href="#" class="unique-property-type">Apartment</a>
+            <div class="unique-property-title">SunnySlope Suites</div>
+            <div class="unique-location">
+                <img src="location-pin.png" alt="Location Icon">
+                <span>Meadowshire Park, Greenfield, USA</span>
+            </div>
+            <div class="unique-price">
+                <img src="dollar.png" alt="Price Icon">
+                <span>25000</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Right Arrow for Navigation -->
+    <div class="unique-arrow unique-right-arrow">&#8250;</div>
+</div>
+
+<!-- Popular Properties Section -->
+<div class="popular-properties-container">
+    <h2 class="section-title">New Listed Properties</h2>
+    <a href="#" class="see-all-link">See All Properties</a>
+</div>
+
+<!-- New listed Property Cards Section -->
+<div class="unique-property-cards-container">
+    <!-- Left Arrow for Navigation -->
+    <div class="unique-arrow unique-left-arrow">&#8249;</div>
+    
+    <!-- Cards Container -->
+    <div class="unique-cards">
+        <!-- Card 1 -->
+        <div class="unique-card">
+            <img src="real7.jpg" alt="Apartment Image">
+            <a href="#" class="unique-property-type">Apartment</a>
+            <div class="unique-property-title">SunnySlope Suites</div>
+            <div class="unique-location">
+                <img src="location-pin.png" alt="Location Icon">
+                <span>Meadowshire Park, Greenfield, USA</span>
+            </div>
+            <div class="unique-price">
+                <img src="dollar.png" alt="Price Icon">
+                <span>25000</span>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="unique-card">
+            <img src="real8.jpg" alt="Apartment Image">
+            <a href="#" class="unique-property-type">Apartment</a>
+            <div class="unique-property-title">SunnySlope Suites</div>
+            <div class="unique-location">
+                <img src="location-pin.png" alt="Location Icon">
+                <span>Meadowshire Park, Greenfield, USA</span>
+            </div>
+            <div class="unique-price">
+                <img src="dollar.png" alt="Price Icon">
+                <span>25000</span>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="unique-card">
+            <img src="real9.jpg" alt="Apartment Image">
+            <a href="#" class="unique-property-type">Apartment</a>
+            <div class="unique-property-title">SunnySlope Suites</div>
+            <div class="unique-location">
+                <img src="location-pin.png" alt="Location Icon">
+                <span>Meadowshire Park, Greenfield, USA</span>
+            </div>
+            <div class="unique-price">
+                <img src="dollar.png" alt="Price Icon">
+                <span>25000</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Right Arrow for Navigation -->
+    <div class="unique-arrow unique-right-arrow">&#8250;</div>
+</div>
+
+<!-- Testimonials Section -->
+<section class="testimonials-section">
+    <div class="testimonials-container">
+        <!-- Testimonials Header -->
+        <h2 class="testimonials-header">Testimonials</h2>
+        
+        <!-- Testimonials Cards Container -->
+        <div class="testimonials-cards-container">
+            <!-- Card 1 -->
+            <div class="testimonial-card">
+                <img src="star.jpg" alt="Testimonial Image" class="testimonial-top-image">
+                <p class="testimonial-paragraph">
+                    "The level of security provided by CypherPlay is unmatched. I feel confident using my card for both everyday purchases and travel. It's the peace of mind I was looking for."
+                </p>
+                <img src="user.jpg" alt="User Image" class="testimonial-user-image">
+                <div class="testimonial-user-name">Tony Stark</div>
+                <div class="testimonial-user-title">Marketing Manager, XYZ</div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="testimonial-card">
+                <img src="star.jpg" alt="Testimonial Image" class="testimonial-top-image">
+                <p class="testimonial-paragraph">
+                    "The level of security provided by CypherPlay is unmatched. I feel confident using my card for both everyday purchases and travel. It's the peace of mind I was looking for."
+                </p>
+                <img src="user.jpg" alt="User Image" class="testimonial-user-image">
+                <div class="testimonial-user-name">Tony Stark</div>
+                <div class="testimonial-user-title">Marketing Manager, XYZ</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-container">
+        <!-- Top Left: Icon and Description -->
+        <div class="footer-top-left">
+            <img src="real1.png" alt="Icon" class="footer-icon">
+            <h5>Design amazing digital experiences</h5>
+            <h5> that create more happy in the world.</h5>
+        </div>
+
+        <!-- Footer Columns -->
+        <div class="footer-columns">
+            <!-- Product Column -->
+            <div class="footer-column">
+                <h4>Product</h4>
+                <ul>
+                    <li>Overview</li>
+                    <li>Features</li>
+                    <li>Solutions</li>
+                    <li>Tutorial</li>
+                    <li>Pricing</li>
+                    <li>Releases</li>
+                </ul>
+            </div>
+
+            <!-- Company Column -->
+            <div class="footer-column">
+                <h4>Company</h4>
+                <ul>
+                    <li>About Us</li>
+                    <li>Careers</li>
+                    <li>Press</li>
+                    <li>News</li>
+                    <li>Media Kit</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+
+            <!-- Resource Column -->
+            <div class="footer-column">
+                <h4>Resource</h4>
+                <ul>
+                    <li>Blog</li>
+                    <li>Newsletters</li>
+                    <li>Events</li>
+                    <li>Help Center</li>
+                    <li>Tutorial</li>
+                    <li>Support</li>
+                </ul>
+            </div>
+
+            <!-- Social Column -->
+            <div class="footer-column">
+                <h4>Social</h4>
+                <ul>
+                    <li>Twitter</li>
+                    <li>LinkedIn</li>
+                    <li>Facebook</li>
+                    <li>GitHub</li>
+                    <li>AngelList</li>
+                    <li>Dribbble</li>
+                </ul>
+            </div>
+
+            <!-- Legal Column -->
+            <div class="footer-column">
+                <h4>Legal</h4>
+                <ul>
+                    <li>Terms</li>
+                    <li>Privacy</li>
+                    <li>Cookies</li>
+                    <li>Licenses</li>
+                    <li>Settings</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
