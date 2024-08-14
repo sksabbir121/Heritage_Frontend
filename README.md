@@ -1,4 +1,4 @@
-Real Estate Property Bidding System - Frontend
+**Real Estate Property Bidding System - Frontend**
 
 Welcome to the frontend of the Real Estate Property Bidding System! This repository contains the HTML, CSS, and JavaScript required to create a modern and responsive real estate property bidding webpage. The frontend is designed to provide a seamless user experience for browsing properties, placing bids, and viewing properties information and testimonials.
 
