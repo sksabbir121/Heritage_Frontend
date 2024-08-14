@@ -16,7 +16,7 @@ Cover Section: A prominent cover section with a background image to enhance visu
 
 
 Installation:
-  1. Clone the Repository:
+  1. Clone the Repository:https://github.com/sksabbir121/Heritage_Frontend/tree/master
 
   2. Open land.html: You can open land.html in your browser to view the page.
 
